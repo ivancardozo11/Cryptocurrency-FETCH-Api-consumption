@@ -53,7 +53,6 @@ function selectCriptomonedas(criptomonedas){
 
 function leerValor(e){
     objBusqueda[e.target.name] = e.target.value;
-    console.log(objBusqueda);
 }
 
 
@@ -101,7 +100,6 @@ async function consultarAPI(){
         const respuesta = await fetch(url);
         const cotizacion = await respuesta.json();
         mostrarCotizacionHTML(cotizacion.DISPLAY[criptomoneda][moneda]);
-        console.log(cotizacion.DISPLAY[criptomoneda]);
     } catch (error) {
         console.log(error);
     }
